@@ -1,0 +1,15 @@
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQkk431R0kod0wHLsKTWOgGA1566927917,1226608IaTZM6pejxn6nbNg6k5SVAiDuneRwt2XcpOLXZYEHjZA
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/CommonV1.70 -I/home/pswang/src/rhsegV1.61 -DTHREEDIM -USERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_SETUP ../../params/friends.cc -o friends.o
+SIGNATURE=1574278712,2904
+SIG_METHOD_NAME=C
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/home/pswang/src/rhsegV1.61/usr/includeuserin CPATHin :sys
+SORTED_DEPS=../../defines.h../../params/friends.cc/usr/bin/g++/home/pswang/src/CommonV1.70/image/image.h../../params/params.h
+BUILD_SIGNATURE=1574278712,2904
+IMPLICIT_DEPS=
+CWD=.
+META_DEPS=../../params/friends.cc/usr/bin/g++sys../point/point.h../shape/shape.hclimitscpl_port.hcstdlibdefines.hfstreamgdal_priv.hgdalwarper.himage/image.hiostreammpi.hsstreamstdexceptstringvectoruser../../params/params.h
+INCLUDE_SFXS=
+SIG_METHOD_IMPLICIT=1
+ARCH=x86_64-linux-thread-multi
+IMPLICIT_TARGETS=friends.o
+END=

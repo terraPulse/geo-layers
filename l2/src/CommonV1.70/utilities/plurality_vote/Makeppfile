@@ -1,0 +1,23 @@
+# Top level makefile for the plurality_vote Program
+NOSHAPE := true
+include standard_defs.mk
+global CPP CPPFLAGS DEFINES LIBS GDAL_BUILD_FLAG SHAPE_BUILD_FLAG COMMON_DIR
+
+OBJECTS := main.o plurality_vote.o params/params.o image/image.o
+
+ifsys msys
+  EXEC := plurality_vote.exe
+else
+  EXEC := plurality_vote
+endif
+
+%.o: %.cc
+    $(CPP) -c $(CPPFLAGS) $(DEFINES) $(input) -o $(output)
+
+$(EXEC): $(OBJECTS)
+    $(CPP) $(inputs) -o $(output) $(LIBS)
+
+install: $(EXEC)
+    mv $(EXEC) $(INSTALL_DIR)
+
+.PHONY: install

@@ -1,0 +1,6 @@
+C_MD5_SUM=M8yd3omlRFOJjAlxhhJ5mQ
+SIGNATURE=1397226479,3458
+INCLUDES=params.h
+SYSTEM_INCLUDES=fstream iostream shape/shape.h
+LIBS=
+END=

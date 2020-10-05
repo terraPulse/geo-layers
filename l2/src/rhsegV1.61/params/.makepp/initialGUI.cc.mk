@@ -1,0 +1,6 @@
+INCLUDES=initialGUI.h params.h
+SYSTEM_INCLUDES=fstream iostream
+C_MD5_SUM=kZaFSdHHWueV5agvOrOkFw
+LIBS=
+SIGNATURE=1416432182,55887
+END=

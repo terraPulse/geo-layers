@@ -1,0 +1,15 @@
+META_DEPS=../../spatial/save_restore_data.cc/usr/bin/g++sysclimitscstdlibdefines.hfstreamimage/image.hmpi.hparams/params.hsstreamstdexceptstringvector
+ARCH=x86_64-linux-thread-multi
+BUILD_SIGNATURE=1574278528,49328
+CWD=.
+INCLUDE_SFXS=
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/rhsegV1.61 -DTHREEDIM -USERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../../spatial/save_restore_data.cc -o save_restore_data.o
+SORTED_DEPS=../../defines.h/usr/bin/g++../../params/params.h../../spatial/save_restore_data.cc
+IMPLICIT_TARGETS=save_restore_data.o
+SIG_METHOD_NAME=C
+SIG_METHOD_IMPLICIT=1
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1566927917,1226608iDuneRwt2XcpOLXZYEHjZA99BpZALm4MBZCHhsimfzRg
+IMPLICIT_DEPS=
+SIGNATURE=1574278528,49328
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/rhsegV1.61/usr/includeuserin CPATHin :sys
+END=

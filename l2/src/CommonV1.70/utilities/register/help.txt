@@ -1,0 +1,25 @@
+
+The register progam is called as follows:
+
+register parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: register -h or register -help
+
+For version information: register -v or register -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specifed in the input parameter file:
+
+-base_image		(string)	Formatted input base image (required)
+-register_image		(string)	Formatted input image to register to
+					base (required)
+-OUT_registered_image	(string)	Output registered image (required)
+
+The output registered image will be formatted with the same format
+as the input base image.

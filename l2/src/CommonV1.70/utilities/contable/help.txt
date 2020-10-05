@@ -1,0 +1,23 @@
+
+The contable progam is called in the following manner:
+
+contable_setup parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: contable -h or contable -help
+
+For version information: contable -v or contable -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specified in the input parameter file:
+
+Input Files:
+-test_image		(string)	Input test set image data (required)
+-classified_image	(string)	Input classified image data (required)
+
+Contable result is printed to standard output.

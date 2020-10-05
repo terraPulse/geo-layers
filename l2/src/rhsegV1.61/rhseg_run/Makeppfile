@@ -1,0 +1,104 @@
+# Top level makefile for the rhseg_run program
+NOSKEY ?= false
+NOGTKMM := true
+NOPTHREADS := true
+NOGDAL ?= false
+NOSHAPE := true
+NOPARALLEL := false
+RHSEG_DIR_FLAG := true
+ifeq ($(NOGDAL), true)
+  COMMON_DIR_FLAG := false
+else
+  COMMON_DIR_FLAG := true
+endif
+THREEDIM_FLAG := false
+
+no_implicit_load ../rhseg
+
+include standard_defs.mk
+
+DEFINES += -DRHSEG_RUN
+
+global CPP LD CPPFLAGS DEFINES LIBS SKEY_BUILD_FLAG COMMON_DIR RHSEG_DIR
+global GTKMM_BUILD_FLAG GTKMM3_BUILD_FLAG GDAL_BUILD_FLAG SHAPE_BUILD_FLAG PARALLEL_BUILD_FLAG
+#global PTHREADS_BUILD_FLAG
+
+&echo " "
+&echo "For rhseg_run build:"
+&echo "CPP = $(CPP)"
+&echo "LD = $(LD)"
+&echo "CPPFLAGS = $(CPPFLAGS)"
+&echo "DEFINES = $(DEFINES)"
+&echo "LIBS = $(LIBS)"
+&echo "SKEY_BUILD_FLAG = $(SKEY_BUILD_FLAG)"
+&echo "GTKMM_BUILD_FLAG = $(GTKMM_BUILD_FLAG)"
+&echo "GTKMM3_BUILD_FLAG = $(GTKMM3_BUILD_FLAG)"
+&echo "GDAL_BUILD_FLAG = $(GDAL_BUILD_FLAG)"
+&echo "SHAPE_BUILD_FLAG = $(SHAPE_BUILD_FLAG)"
+&echo "PARALLEL_BUILD_FLAG = $(PARALLEL_BUILD_FLAG)"
+#&echo "PTHREADS_BUILD_FLAG = $(PTHREADS_BUILD_FLAG)"
+&echo " "
+
+CORE_OBJS := main.o hseg.o check_buf_size.o find_nghbr.o heap.o rhseg.o lrhseg.o lhseg.o \
+             first_merge_reg_grow.o artifact_elimination.o
+
+PARAMS_OBJS := params/params.o params/friends.o
+
+ifeq ($(GDAL_BUILD_FLAG), true)
+  IMAGE_OBJS := image/image.o
+else
+  IMAGE_OBJS :=
+endif 
+
+SPATIAL_OBJS := spatial/spatial.o spatial/find_section.o \
+                spatial/boundary_map.o spatial/update_region_label.o
+ifneq ($(PARALLEL_BUILD_FLAG), true)
+  SPATIAL_OBJS += spatial/save_restore_data.o
+endif
+
+PIXEL_OBJS := pixel/pixel.o pixel/do_region_relabel.o
+
+REGION_OBJS := region/region_class.o region/region_seam.o region/region_object.o region/update_region_info.o \
+               region/connected_component.o region/do_region_init.o region/merge_regions.o \
+               region/update_nghbrs.o region/update_regions.o region/nghbrs_label_set.o
+
+INDEX_OBJS := index/index.o index/get_seam_index_data.o index/get_border_index_data.o
+
+RESULTS_OBJS := results/results.o
+
+SUBDIR_OBJS := $(PARAMS_OBJS) $(IMAGE_OBJS) $(SPATIAL_OBJS) $(PIXEL_OBJS) \
+               $(REGION_OBJS) $(INDEX_OBJS) $(RESULTS_OBJS)
+
+ifeq ($(SKEY_BUILD_FLAG), true)
+  SERIALKEY_OBJS = serialkey/serialkey.o
+
+  SUBDIR_OBJS += $(SERIALKEY_OBJS)
+endif
+
+ifeq ($(PARALLEL_BUILD_FLAG), true)
+  PARALLEL_OBJS = parallel/broadcast_params.o parallel/do_label_offset.o \
+                  parallel/recur_send.o parallel/recur_receive.o \
+                  parallel/parallel_requests.o parallel/parallel_server.o parallel/do_termination.o
+
+  SUBDIR_OBJS += $(PARALLEL_OBJS)
+endif
+
+ifsys msys
+  EXEC := rhseg_run.exe
+else
+  EXEC := rhseg_run
+endif
+
+%.o: $(RHSEG_DIR)/rhseg/%.cc
+    $(CPP) -c $(CPPFLAGS) $(DEFINES) $(input) -o $(output)
+
+%.o: %.cc
+    $(CPP) -c $(CPPFLAGS) $(DEFINES) $(input) -o $(output)
+
+$(EXEC): $(CORE_OBJS) $(SUBDIR_OBJS)
+    $(LD) $(inputs) -o $(output) $(LIBS)
+
+install: $(EXEC)
+    mv $(EXEC) $(INSTALL_DIR)
+
+.PHONY: install

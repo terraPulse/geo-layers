@@ -1,0 +1,15 @@
+SIGNATURE=1601514678,30888
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/usr/include/gdal/usr/includeuserin CPATHin :sys
+ARCH=x86_64-linux-gnu-thread-multi
+META_DEPS=/usr/bin/g++params.ccsyscstdlibfstreamiostreamsstreamstringvectoruser./params.h
+DEP_SIGS=1586428689,1158288cL6f7x70jRHzxym4X1woKQGaN+MhBiSNj9+CPArlgYNg
+COMMAND=g++ -c -Wall -O3 -ffloat-store -I/home/pswang/src/CommonV1.70 -Wno-unused-result -I/usr/include/gdal -DGDAL params.cc -o params.o
+IMPLICIT_DEPS=
+INCLUDE_SFXS=
+SIG_METHOD_NAME=C
+CWD=.
+SORTED_DEPS=/usr/bin/g++params.ccparams.h
+SIG_METHOD_IMPLICIT=1
+BUILD_SIGNATURE=1601514678,30888
+IMPLICIT_TARGETS=params.o
+END=

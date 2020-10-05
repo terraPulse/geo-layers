@@ -1,0 +1,15 @@
+BUILD_SIGNATURE=1574278519,38272
+ARCH=x86_64-linux-thread-multi
+META_DEPS=../rhseg_run/main.cc/usr/bin/g++sysclimitscstdlibcstringctimedefines.hfstreamgdal_priv.himage/image.hiostreammapmpi.hparallel/hseg.hparams/params.hrhseg/hseg.hserialkey/serialkey.hsetsstreamstdexceptstringvector
+CWD=.
+INCLUDE_SFXS=
+IMPLICIT_TARGETS=main.o
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/rhsegV1.61 -DTHREEDIM -USERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../rhseg_run/main.cc -o main.o
+SORTED_DEPS=../defines.h/usr/bin/g++../rhseg_run/main.cc../params/params.h../serialkey/serialkey.h../parallel/hseg.h../rhseg/hseg.h
+SIG_METHOD_NAME=C
+SIG_METHOD_IMPLICIT=1
+IMPLICIT_DEPS=
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1566927917,122660850N+JLnqhrvr2Srj6N6NyAiDuneRwt2XcpOLXZYEHjZAbNRjCsEoBUaS/9NNn4qwvAgjuOGgPKZisdJk8h4wLvqAvm03ZpR0EzimwuTG4WA6Zg
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/rhsegV1.61/usr/includeuserin CPATHin :sys
+SIGNATURE=1574278519,38272
+END=

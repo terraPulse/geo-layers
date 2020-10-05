@@ -1,0 +1,6 @@
+LIBS=
+C_MD5_SUM=qDsEmi7dh+KBLwQJEZqnPA
+SIGNATURE=1526070144,16706
+INCLUDES=initialParams.h
+SYSTEM_INCLUDES=fstream iostream params/params.h
+END=

@@ -1,0 +1,15 @@
+IMPLICIT_DEPS=
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQce1LpOPQ2i8GUOqymaDn9g3Rjfzff44WUmzRYDD6/EBg1586428689,11582881585509601,723681585509601,24009Cm5XOfDRYWcPtlBkU8K9Dw0wanbfcnNkakvhmdf5v1qggKsgWTp6pVVrdtZXSiA39A4qTCXXSbbllLkrb0vP3qYQzJOedzGRSkZBUFKXmYLZXAqj8Ivpinlk0EkcICCAFghgiDuneRwt2XcpOLXZYEHjZAFqUobXjx+i8JSyW4D0szcQ1586892364,41701bNRjCsEoBUaS/9NNn4qwvARqNJcMJHtBQSkS9GpxjoGwsmTSomH7ByiSykMNxGOSyAgjuOGgPKZisdJk8h4wLvqAvm03ZpR0EzimwuTG4WA6Zg
+BUILD_SIGNATURE=1588417704,42480
+ARCH=x86_64-linux-gnu-thread-multi
+SORTED_DEPS=../defines.h/home/pswang/src/CommonV1.70/gui/fileObject.h../params/finalGUI.h/usr/bin/g++/usr/include/gdal/gdal_priv.h/usr/include/gdal/gdalwarper.h/home/pswang/src/CommonV1.70/image/image.h../params/initialGUI.hmain.cc/home/pswang/src/CommonV1.70/gui/numberListObject.h/home/pswang/src/CommonV1.70/gui/numberObject.h../params/outputFileGUI.h../params/params.h../params/paramsGUI.h/usr/include/pthread.h../serialkey/serialkey.h../serialkey/serialkeyGUI.h../status/statustracker.h../parallel/hseg.hhseg.h
+INCLUDE_SFXS=
+SIG_METHOD_NAME=C
+META_DEPS=/usr/bin/g++main.ccsys../point/point.h../shape/shape.hclimitscstdlibctimedefines.hexpParamsGUI.hfstreamgdal_priv.hgdalwarper.hgtkmm.hgui/fileObject.hgui/numberListObject.hgui/numberObject.himage/image.hiostreammapmpi.hparallel/hseg.hparams/finalGUI.hparams/initialGUI.hparams/outputFileGUI.hparams/params.hparams/paramsGUI.hpthread.hserialkey/serialkey.hserialkey/serialkeyGUI.hsetsstreamstatus/statustracker.hstdexceptstringvectoruser./hseg.h
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/home/pswang/src/rhsegV1.61/usr/include/gdal/usr/includeuserin CPATHin :sys
+SIGNATURE=1588417704,42480
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/CommonV1.70 -I/home/pswang/src/rhsegV1.61 -I/usr/include/gdal -UTHREEDIM -USERIALKEY -UGTKMM -DGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DCONSOLIDATED -DRHSEG_RUN main.cc -o main.o
+IMPLICIT_TARGETS=main.o
+SIG_METHOD_IMPLICIT=1
+CWD=.
+END=

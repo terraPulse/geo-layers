@@ -1,0 +1,15 @@
+BUILD_SIGNATURE=1588417765,801368
+SIG_METHOD_NAME=C
+COMMAND=g++ main.o hseg.o check_buf_size.o find_nghbr.o heap.o rhseg.o lrhseg.o lhseg.o first_merge_reg_grow.o artifact_elimination.o params/params.o params/friends.o image/image.o spatial/spatial.o spatial/find_section.o spatial/save_restore_data.o spatial/boundary_map.o spatial/update_region_label.o pixel/pixel.o pixel/do_region_relabel.o region/region_class.o region/region_seam.o region/region_object.o region/update_region_info.o region/connected_component.o region/do_region_init.o region/merge_regions.o region/update_nghbrs.o region/update_regions.o region/nghbrs_label_set.o index/index.o index/get_seam_index_data.o index/get_border_index_data.o results/results.o -o rhseg -L/usr/lib -lgdal
+SIG_METHOD_IMPLICIT=1
+INCLUDE_SFXS=lib.la.so.sa.a.sl
+SORTED_DEPS=artifact_elimination.ospatial/boundary_map.ocheck_buf_size.oregion/connected_component.oregion/do_region_init.opixel/do_region_relabel.ofind_nghbr.ospatial/find_section.ofirst_merge_reg_grow.oparams/friends.o/usr/bin/g++index/get_border_index_data.oindex/get_seam_index_data.oheap.ohseg.oimage/image.oindex/index.olhseg.o/usr/lib/libgdal.solrhseg.omain.oregion/merge_regions.oregion/nghbrs_label_set.oparams/params.opixel/pixel.oregion/region_class.oregion/region_object.oregion/region_seam.oresults/results.orhseg.ospatial/save_restore_data.ospatial/spatial.oregion/update_nghbrs.oregion/update_region_info.ospatial/update_region_label.oregion/update_regions.o
+IMPLICIT_TARGETS=rhseg
+DEP_SIGS=1588417684,124241588417685,138401588417686,71681588417687,370801588417688,275841588417689,125601588417689,41361588417690,28801588417691,313841588417692,38161586428689,11582881588417693,205361588417694,206801588417695,229761588417696,925601588417699,2416881588417700,90561588417701,477601585509601,201974881588417703,562881588417704,424801588417705,487121588417706,124481588417708,1886961588417709,720401588417712,1909441588417713,892401588417714,50641588417715,275681588417715,30481588417716,542961588417718,657681588417719,99441588417719,94801588417720,37921588417721,9488
+META_DEPS=/usr/bin/g++
+INCLUDE_PATHS=lib/usr/lib/usr/local/lib/usr/libin LIBRARY_PATHsys/usr/includeuserin CPATHin :sys
+IMPLICIT_DEPS=artifact_elimination.ocheck_buf_size.ofind_nghbr.ofirst_merge_reg_grow.oheap.ohseg.oimage/image.oindex/get_border_index_data.oindex/get_seam_index_data.oindex/index.olhseg.olrhseg.omain.oparams/friends.oparams/params.opixel/do_region_relabel.opixel/pixel.oregion/connected_component.oregion/do_region_init.oregion/merge_regions.oregion/nghbrs_label_set.oregion/region_class.oregion/region_object.oregion/region_seam.oregion/update_nghbrs.oregion/update_region_info.oregion/update_regions.oresults/results.orhseg.ospatial/boundary_map.ospatial/find_section.ospatial/save_restore_data.ospatial/spatial.ospatial/update_region_label.oliblibgdal
+ARCH=x86_64-linux-gnu-thread-multi
+CWD=.
+SIGNATURE=1588417765,801368
+END=

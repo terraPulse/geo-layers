@@ -1,0 +1,80 @@
+
+The hsegextract progam can be called in two different manners:
+
+hsegextract
+
+(where the program parameters are entered via a Graphical User Interface)
+
+or
+
+hsegextract parameter_file_name
+
+(where the program parameters are read from a parameter file)
+
+In the later case, "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: hsegextract -h or hsegextract -help
+For version information: hsegextract -v or hsegextract -version
+
+The (optional) parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specified in the input parameter file:
+
+-oparam	        	    (string)	HSeg/RHSeg output parameter file
+					(required)
+-hseg_level	(short unsigned int)	Hierarchical segmentation level at which
+					the selected feature values are extracted.
+					(required)
+
+One or more of the following are required:
+
+-class_labels_map_ext	    (string)	File name for the class labels map
+					extracted at the selected
+					hierarchical segmentation level.
+-class_npix_map_ext	    (string)	File name for the class # of pixels map
+					extracted at the selected
+					hierarchical segmentation level.
+-class_mean_map_ext	    (string)	File name for the class mean feature map
+					extracted at the selected
+					hierarchical segmentation level.
+-class_std_dev_map_ext	    (string)	File name for the class standard
+					deviation feature map extracted at the
+					selected hierarchical segmentation level.
+-class_bpratio_map_ext	    (string)	File name for the class boundary pixel
+					ratio feature map extracted at the
+					selected hierarchical segmentation level.
+-class_shapefile_ext       (string)	Base file name for the class shapefile
+					to contain the segmentation information
+					extracted at the selected hierarchical
+					segmentation level.
+-object_labels_map_ext	    (string)	File name for the object labels map
+					extracted at the selected
+					hierarchical segmentation level.
+-object_npix_map_ext	    (string)	File name for the object # of pixels map
+					extracted at the selected
+					hierarchical segmentation level.
+-object_mean_map_ext	    (string)	File name for the object mean feature map
+					extracted at the selected
+					hierarchical segmentation level.
+-object_std_dev_map_ext     (string)	File name for the object standard
+					deviation feature map extracted at the
+					selected hierarchical segmentation level.
+-object_bpratio_map_ext     (string)	File name for the object boundary pixel
+					ratio feature map extracted at the
+					selected hierarchical segmentation level.
+-object_shapefile_ext       (string)	Base file name for the object shapefile
+					to contain the segmentation information
+					extracted at the selected hierarchical
+					segmentation level.
+
+NOTE: The "object" files will be ignored if the
+"object_labels_map" is not specified in the HSeg/RHSeg output parameter file
+(-oparam above).
+
+
+NOTE: If the "object_labels_map" is specified, a region class
+shapefile cannot be produced without an accompanying region object shapefile.
+

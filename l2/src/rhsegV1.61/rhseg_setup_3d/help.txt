@@ -1,0 +1,289 @@
+
+The rhseg_setup program can be called in two different manners:
+
+rhseg_setup
+
+(where the program parameters are entered via a Graphical User Interface)
+
+or
+
+rhseg_setup parameter_file_name
+
+(where the program parameters are read from a parameter file)
+
+In the later case, "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: rhseg_setup -h or rhseg_setup -help
+
+For version information: rhseg_setup -v or rhseg_setup -version
+
+The (optional) parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+This must be the first entry in the parameter file:
+-program_mode		(string)	Program Mode - Valid values are:
+					  HSWO,
+					  HSEG, or 
+					  RHSEG.
+					 (default = RHSEG)
+
+The following parameters may be specified in the input parameter file:
+
+Input Files:
+-input_image		(string)	Input image data file name (required)
+-ncols			(int)		Number of columns in input image data
+				        (0 < ncols < 65535, required)
+-nrows			(int)		Number of rows in input image data
+				        (0 < nrows < 65535, required)
+-nslices		(int)		Number of slices in input image data
+					(0 < nslices < 65535, required)
+-nbands			(int)		Number of spectral bands in input image
+					data.  (0 < nbands < 65535, required)
+-dtype			(string)	Input image data type. Currently must
+					be either:
+					 UInt8   => "unsigned char (8-bit)" or
+					 UInt16  => "unsigned short int
+						     (16-bit)" or
+					 Float32 => "float (32-bit)"
+					(required)
+-scale			(double)	Comma delimited list of input data
+					scale factors (specify one value per
+					 band, default = 1.0 for each band)
+-offset			(double)	Comma delimited list of input data
+					offset factors (specify one value per
+					 band, default = 0.0 for each band)
+-mask			(string)	Input data mask file name
+					Data type must be unsigned char.
+					(default = {none})
+-mask_value		(int)		If input data mask file is provided,
+					this is the value in the mask file that
+					designates bad data. (default = 0.)
+-region_map_in		(string)	Input region map file (optional,
+					 default = {none})
+
+Other Required Parameters:
+-spclust_wght		(float)		Relative importance of spectral
+					clustering versus region growing
+					(Value ignored and parameter set to
+					 0.0 for program mode HSWO, otherwise,
+					 0.0 <= spclust_wght <= 1.0,
+					 no default)
+-dissim_crit		(int)		Dissimilarity Criterion
+					  1. "1-Norm,"
+					  2. "2-Norm,"
+					  3. "Infinity Norm,"
+					  4. "Spectral Angle Mapper,"
+					  5. "Spectral Information Divergence,"
+					  6. "Square Root of Band Sum Mean
+					     Squared Error,"
+					  7. "Square Root of Band Maximum Mean
+					     Squared Error,"
+					  8. "Normalized Vector Distance,"
+					  9. "Entropy,"
+					 10. "SAR Speckle Noise Criterion,"
+					 (default: 6. "Square Root of Band
+					  Sum Mean Squared Error")
+-log			(string)	Output log file (no default)
+
+
+The following optional parameters specify the scaling of the input image data:
+
+Output Files (with default names - see User's Manual):
+-class_labels_map	(string)	Output class labels map file name
+					(required)
+-boundary_map		(string)	Output hierarchical boundary map file
+					name (optional)
+-region_classes		(string)	Output region classes file name
+					(required)
+-oparam			(string)	Output parameter file name (required,
+					default =
+					      "'input_image_file_name'.oparam")
+
+Other optional output flags and files (with default names) are:
+-object_conn_type1	(bool)		If true, create object labels map with
+					"-conn_type" = 1, irrespective of the
+					value of "-conn_type" (below),
+					(default = false)
+-object_labels_map	(string)	Output object labels map file name
+-region_objects		(string)	Output region objects file name
+NOTE: Both object_labels_map and region_objects must be specified if either is specified!
+These files names are ignored for program mode HSWO with "-conn_type" = 1
+or for program mode HSWO for any value of "-conn_type" when "-object_conn_type1" = false
+
+The following parameters select the optional contents of the required output
+region_classes file and the optional output region_objects file (above):
+
+-region_sum		(bool)		Flag to request the inclusion of the
+					region sum feature values (also sumsq
+					and sumxlogx, if available). 
+					(true (1) or false (0),
+					 default = true if nbands < 20,
+					 default = false otherwise)
+-region_std_dev		(bool)		Flag to request the inclusion of the
+					region standard deviation feature
+					values. (true (1) or false (0),
+					 default = false.)
+-region_boundary_npix	(bool)		Flag to request the inclusion of the
+					region boundary number of pixels values.
+					(true (1) or false (0),default = false)
+-region_threshold	(bool)		Flag to request the inclusion of the
+					merge threshold for the most recent
+					merge for each region.
+					(true (1) or false (0), default = false)
+-region_nb_objects	(bool)		Flag to request the inclusion of the
+					number of region objects contained in
+					each region class. (true (1) or
+					 false (0), default = true
+					 if spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects"are specified,
+					 and false otherwise.
+					 A true value is allowed only when
+					 spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects" are specified.
+					 User provided value ignored and set to
+					 true if "-region_objects_list" (below)
+					 is true.)
+-region_objects_list	(bool)		Flag to request the inclusion of the
+					list of region objects contained in
+					each region class. (true (1) or
+					 false (0), default = true if
+					 spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects" are specified,
+					 and false otherwise.
+					 A true value is allowed only when
+					 spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects" are specified.)
+
+The following parameters are recommended for variation by all users
+(defaults provided):
+
+-conn_type		(int)		Neighbor connectivity type
+					  1-D Case:
+					    1. "Two Nearest Neighbors",
+					    2. "Four Nearest Neighbors",
+					    3. "Six Nearest Neighbors",
+					    4. "Eight Nearest Neighbors",
+					    (default: 1. "Two Nearest
+					     Neighbors")
+					  2-D Case:
+					    1. "Four Nearest Neighbors",
+					    2. "Eight Nearest Neighbors",
+					    3. "Twelve Nearest Neighbors",
+					    4. "Twenty Nearest Neighbors",
+					    5. "Twenty-Four Nearest Neighbors",
+					    (default: 2. "Eight Nearest
+					     Neighbors")
+					  3-D Case:
+					    1. "Six Nearest Neighbors",
+					    2. "Eighteen Nearest Neighbors",
+					    3. "Twenty-Six Nearest Neighbors",
+					    (default: 3. "Twenty-Six Nearest
+					     Neighbors")
+-chk_nregions  		(unsigned int)	Number of regions at which hierarchical
+					segmentation output is initiated (2 <=
+					 chk_nregions < 65535, default = 255 if
+					 "hseg_out_nregions" and
+					 "hseg_out_thresholds" not specified)
+-hseg_out_nregions 	(unsigned int)	The set of number of region levels
+					at which hierarchical segmentation
+					outputs are made (a comma delimited
+					 list)
+-hseg_out_thresholds	(float)		The set of merge thresholds at which
+					hierarchical segmentation outputs are
+					made (a comma delimited list)
+NOTE: -chk_nregions, -hseg_out_nregions and -hseg_out_thresholds are mutually
+exclusive. If more than one of these are specified, the last one specified
+controls and the previous specifications are ignored. However,
+-hseg_out_nregions and -hseg_out_thresholds may not be specified for
+-rnb_levels > 1.
+
+-conv_nregions		(unsigned int)	Number of regions for final convergence.
+					(0 < conv_nregions < 65535, default = 2)
+-gdissim		(bool)		Flag to request output of global
+					dissimilarity values in the log file.
+					(true (1) or false (0), default = false)
+
+The default values should be used for the following parameters,
+except in special circumstances (defaults provided):
+
+-debug			(int)		Debug option - controls log file
+					outputs, (0 < debug < 255, default = 1)
+-normind		(int)		Image normalization type
+					  1."No Normalization",
+					  2."Normalize Across Bands",
+					  3."Normalize Bands Separately"
+					(default: 2. "Normalize Across Bands")
+-init_threshold		(float)		Threshold for initial fast region
+					merging by a region oriented first
+					merge process (default = 0.0)
+-std_dev_wght		(float)		Weight for standard deviation spatial
+					feature (std_dev_wght >= 0.0,
+					 default = 0.0)
+-split_pixels_factor	(float)		Pixel splitting factor.  This factor is
+					used to determine if a pixel will be
+					split out from its current region. User
+					specified value ignored and set to 0.0
+					for HSWO and HSEG when
+					hseg_out_thresholds are specified.
+					(0.0 <= split_pixels_factor, default =
+					 1.5 for the RHSEG program mode, and
+					 default = 0.0 for HSWO and HSEG
+					 program modes. The "min_nregions"
+					 and "region_threshold_factor"
+					 parameters must also be specified in
+					 the HSWO and HSEG programs modes. No
+					 pixel splitting is  performed if
+					 split_pixels_factor = 0.0.)
+-seam_threshold_factor	(float)		This threshold factor is used in
+					determining whether a region found
+					across a processing window seam is to
+					be considered in determining whether a
+					pixel is to be split out of its current
+					region. (1.0 <= seam_threshold_factor,
+					 default = 1.5. If seam_threshold_factor
+					 == 1.0, no regions are selected by this
+					 method. Value ignored and parameter set
+					 to 1.0 for HSWO and HSEG program modes.)
+-region_threshold_factor (float)	This threshold factor is used in
+					determining which regions are to be
+					considered in determining whether a
+					pixel is to be split out of its current
+					region. (0.0 <= threshold_factor,
+					 default = 0.0.
+					 If region_threshold_factor == 0.0, no
+					 regions are selected by this method.)
+-rnb_levels		(int)		Number of recursive levels
+					(0 < rnb_levels < 255, default
+					 calculated for RHSEG program mode.
+					 Value ignored and parameter set to 1
+					 for HSWO and HSEG program modes.)
+-ionb_levels		(int)		Recursive level at which data I/O is
+					performed (0 < ionb_levels <=
+					 rnb_levels, default calculated)
+-min_nregions		(unsigned int)	Number of regions for convergence at
+					intermediate stages.
+					(0 < min_nregions < 4294967295 default
+					 calculated for RHSEG program mode)
+-spclust_min		(unsigned int)	Minimum number of regions for which
+					spectral clustering is utilized
+					(For splcust_wght = 0.0, default = 0;
+					 otherwise default = 512)
+-spclust_max		(unsigned int)	Maximum number of regions for which
+					spectral clustering is utilized
+					(For splcust_wght = 0.0, default = 0;
+					 otherwise default = 1024)
+-merge_acceleration	(bool)		Flag to request utilization of a merge
+					acceleration factor for small regions.
+					(true (1) or false (0), default = true)
+
+Copyright © 2006 United States Government as represented by the
+Administrator of the National Aeronautics and Space Administration.
+No copyright is claimed in the United States under Title 17, U.S. Code.
+All Other Rights Reserved.
+

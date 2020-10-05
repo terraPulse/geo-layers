@@ -1,0 +1,6 @@
+INCLUDES=
+SYSTEM_INCLUDES=defines.h map parallel/hseg.h set vector
+C_MD5_SUM=vm03ZpR0EzimwuTG4WA6Zg
+LIBS=
+SIGNATURE=1416432185,10383
+END=

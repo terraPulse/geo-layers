@@ -1,0 +1,15 @@
+BUILD_SIGNATURE=1574278527,27224
+ARCH=x86_64-linux-thread-multi
+META_DEPS=../../results/results.cc/usr/bin/g++sys../defines.hclimitscstdlibdefines.hfloat.hfstreamimage/image.hiostreammapmpi.hparallel/region_class.hparallel/region_object.hparams/params.hregion/region_class.hregion/region_object.hsetsstreamstdexceptstringvectoruser../../results/results.h
+IMPLICIT_TARGETS=results.o
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/rhsegV1.61 -DTHREEDIM -USERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../../results/results.cc -o results.o
+SORTED_DEPS=../../defines.h/usr/bin/g++../../params/params.h../../results/results.cc../../results/results.h../../parallel/region_class.h../../parallel/region_object.h../../region/region_class.h../../region/region_object.h
+CWD=.
+INCLUDE_SFXS=
+SIG_METHOD_IMPLICIT=1
+SIG_METHOD_NAME=C
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/rhsegV1.61/usr/includeuserin CPATHin :sys
+SIGNATURE=1574278527,27224
+IMPLICIT_DEPS=
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1566927917,1226608iDuneRwt2XcpOLXZYEHjZAoA9G/MyyxWTxrSwPwiMPAAbHzduVfmpQZiPcjKFstUvAQkhYfQY2ZFHF5fjcjUcquQU0zUr4GDuuZM4IbkmJwifAcHtwjdkjFzwbxwGCtTJaBgxlpppl+HgYGYCorfrhAbDg
+END=

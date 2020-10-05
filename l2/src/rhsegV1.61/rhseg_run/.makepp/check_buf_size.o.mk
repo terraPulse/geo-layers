@@ -1,0 +1,15 @@
+SIGNATURE=1588417795,7168
+CWD=.
+ARCH=x86_64-linux-gnu-thread-multi
+IMPLICIT_DEPS=
+IMPLICIT_TARGETS=check_buf_size.o
+DEP_SIGS=d80VbDqhqANtmyx4LWWajgz/QeDlmwxoI4L/bLCeMkSQ1586428689,11582881585509601,723681585509601,24009Cm5XOfDRYWcPtlBkU8K9DwiDuneRwt2XcpOLXZYEHjZAgjuOGgPKZisdJk8h4wLvqAvm03ZpR0EzimwuTG4WA6Zg
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/home/pswang/src/rhsegV1.61/usr/include/gdal/usr/includeuserin CPATHin :sys
+META_DEPS=../rhseg/check_buf_size.cc/usr/bin/g++sys../point/point.h../shape/shape.hclimitscstdlibdefines.hfstreamgdal_priv.hgdalwarper.himage/image.hiostreammapmpi.hparallel/hseg.hparams/params.hsetsstreamstdexceptstringvectoruser../rhseg/hseg.h
+INCLUDE_SFXS=
+SORTED_DEPS=../rhseg/check_buf_size.cc../defines.h/usr/bin/g++/usr/include/gdal/gdal_priv.h/usr/include/gdal/gdalwarper.h/home/pswang/src/CommonV1.70/image/image.h../params/params.h../parallel/hseg.h../rhseg/hseg.h
+BUILD_SIGNATURE=1588417795,7168
+SIG_METHOD_NAME=C
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/CommonV1.70 -I/home/pswang/src/rhsegV1.61 -I/usr/include/gdal -UTHREEDIM -USERIALKEY -UGTKMM -DGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../rhseg/check_buf_size.cc -o check_buf_size.o
+SIG_METHOD_IMPLICIT=1
+END=

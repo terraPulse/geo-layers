@@ -1,0 +1,25 @@
+
+The band_differences progam is called as follows:
+
+band_differences parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: band_differences -h or band_differences -help
+
+For version information: band_differences -v or band_differences -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specifed in the input parameter file:
+
+-input_image		(string)	Input image (required)
+-mask_image		(string)	Input data mask file name
+					(optional, default = {none})
+-band_difference_images	(string)	Base name for set of output band
+					difference images (required)
+
+A set of output band differences image will be output in ENVI format.

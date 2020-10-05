@@ -1,0 +1,6 @@
+INCLUDES=params.h
+SYSTEM_INCLUDES=fstream image/image.h iostream
+LIBS=
+C_MD5_SUM=9BxUE9ku/ZOfXYz/POrjzw
+SIGNATURE=1397226448,4342
+END=

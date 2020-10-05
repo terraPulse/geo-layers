@@ -1,0 +1,6 @@
+INCLUDES=
+SYSTEM_INCLUDES=cstring defines.h fstream image/image.h set vector
+C_MD5_SUM=uqVJLOXFsS3kiHM31G/1/g
+LIBS=
+SIGNATURE=1416432193,20300
+END=
