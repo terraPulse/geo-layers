@@ -1,6 +1,0 @@
-SYSTEM_INCLUDES=cstdlib cstring fstream iostream
-INCLUDES=shape.h
-LIBS=
-C_MD5_SUM=MI+8aOE48lnQe//AcY2BMg
-SIGNATURE=1397226428,24329
-END=

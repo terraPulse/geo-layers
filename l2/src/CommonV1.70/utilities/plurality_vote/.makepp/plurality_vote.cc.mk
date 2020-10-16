@@ -1,6 +1,0 @@
-INCLUDES=params/params.h plurality_vote.h
-SYSTEM_INCLUDES=iostream
-LIBS=
-C_MD5_SUM=Kd+h8NY9CpVi+TGC9zHtDA
-SIGNATURE=1397226467,5783
-END=

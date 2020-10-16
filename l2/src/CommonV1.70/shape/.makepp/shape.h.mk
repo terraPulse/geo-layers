@@ -1,6 +1,0 @@
-INCLUDES=../point/point.h
-SYSTEM_INCLUDES=shapefil.h string
-LIBS=
-C_MD5_SUM=/TtsDo9cGFOjahoMprh5zw
-SIGNATURE=1397226428,3895
-END=

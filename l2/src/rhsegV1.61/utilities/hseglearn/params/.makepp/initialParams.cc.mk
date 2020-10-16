@@ -1,6 +1,0 @@
-INCLUDES=initialParams.h
-SYSTEM_INCLUDES=iostream params/params.h
-C_MD5_SUM=h/kmLUocQE12ZKjZ29hETQ
-LIBS=
-SIGNATURE=1416432198,28099
-END=
