@@ -3,7 +3,7 @@ FROM pswang/geo-layers:l0
 WORKDIR /opt
 RUN mkdir /opt/tmp
 
-ADD ../bin /opt/bin
+ADD bin /opt/bin
 ENV PATH=$PATH:/opt/bin
 ENV TMP=/opt/tmp
 
