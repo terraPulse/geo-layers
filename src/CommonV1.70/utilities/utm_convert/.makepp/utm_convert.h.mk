@@ -1,0 +1,6 @@
+INCLUDES=
+SYSTEM_INCLUDES=sstream stdexcept string
+C_MD5_SUM=1QK6gCnxNlsw7cuh/lfMpQ
+LIBS=
+SIGNATURE=1397226471,785
+END=

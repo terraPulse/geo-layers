@@ -1,0 +1,19 @@
+
+The shape_info progam is called as follows:
+
+shape_info parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: shape_info -h or shape_info -help
+
+For version information: shape_info -v or shape_info -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specifed in the input parameter file:
+
+-shape_in_file		(string)	Input shapefile (required)

@@ -1,0 +1,48 @@
+
+The hsegviewer progam can be called in two different manners:
+
+hsegviewer (where the program parameters are entered via a
+            Graphical User Interface)
+or
+hsegviewer parameter_file_name (where the program parameters are read from a
+                                parameter file)
+
+In the later case, "parameter_file_name" is the name of the input parameter file
+(STRING) (for contents see below).
+
+For this help: hsegviewer -h or hsegviewer -help
+For version information: hsegviewer -v or hsegviewer -version
+
+The (optional) parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specified in the input parameter file:
+
+-oparam                 (string)	HSeg/RHSeg output parameter file
+					(required)
+-red_display_band	(short)		Spectral band from the input image data
+					selected for display as red (required)
+-green_display_band	(short)		Spectral band from the input image data
+					selected for display as green (required)
+-blue_display_band	(short)		Spectral band from the input image data
+					selected for display as blue (required)
+-grey_scale		(bool)		Region Class Grey Scale Display Flag
+					Value 1 selects grey scale display for
+					Region Class display. Value 0 selects
+					pseudo color display. (default = 0)
+-label_out	        (string)	Output class label map
+					(default = label_out.tif)
+-ascii_out	        (string)	Output ASCII class label names list
+					(default = ascii_out.txt)
+-view_dimension	        (string)	Dimension from which a selected element
+					is displayed in 2-D display
+					(default = slice, allowed values =
+					 column, row or slice)
+-view_element		(short)		Selected element for 2-D display
+					(default = 0)
+-label_in		(string)	Input class label map (no default)
+-ascii_in		(string)	Input ASCII class label names list
+					(no default)
+-reference1		(string)	Input Reference File (1) (no default)
+-reference2		(string)	Input Reference File (2) (no default)

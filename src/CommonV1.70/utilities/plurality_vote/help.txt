@@ -1,0 +1,30 @@
+
+The plurality_vote progam is called in the following manner:
+
+plurality_vote parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: plurality_vote -h or plurality_vote -help
+
+For version information: plurality_vote -v or plurality_vote -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specified in the input parameter file:
+
+Input Files:
+-pixel_classification	(string)	Input Pixel-Based Classification (required)
+-region_segmentation	(string)	Input Region Segmentation (required)
+-color_table		(string)	256 entry RGB Color Table (file) for output
+					classified image (as listed by gdalinfo,
+					optional)
+
+Output Files:
+-region_classification	(string)	Output plurality vote region-based
+					classification (required)
+					Will be in same format as input
+					pixel_classification file.

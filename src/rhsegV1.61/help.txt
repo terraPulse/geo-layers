@@ -1,0 +1,291 @@
+
+The rhseg progam can be called in two different manners:
+
+rhseg
+
+(where the program parameters are entered via a Graphical User Interface)
+
+or
+
+rhseg parameter_file_name
+
+(where the program parameters are read from a parameter file)
+
+In the later case, "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: rhseg -h or rhseg -help
+
+For version information: rhseg -v or rhseg -version
+
+The (optional) parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+This must be the first entry in the parameter file:
+-program_mode		(string)	Program Mode - Valid values are:
+					  HSWO,
+					  HSEG, or 
+					  RHSEG.
+					 (default = RHSEG)
+
+The following parameters may be specified in the input parameter file:
+
+Input Files:
+-input_image		(string)	Input image data file name (required)
+-mask			(string)	Input data mask file name (optional,
+					 default = {none})
+-std_dev_image		(string)	Input standard deviation image file
+					(optional, default = {none})
+-std_dev_mask		(string)	Input standard devation mask file
+					(optional, default = {none})
+-edge_image		(string)	Input edge image file (required
+					 for RHSEG mode, optional otherwise,
+					 default = {none})
+-edge_mask		(string)	Input edge mask file (optional,
+					 default = {none})
+-region_map_in		(string)	Input region map file (optional,
+					 default = {none})
+
+Other Required Parameters:
+-spclust_wght		(float)		Relative importance of spectral
+					clustering versus region growing
+					(Value ignored and parameter set to
+					 0.0 for program mode HSWO, otherwise,
+					 0.0 <= spclust_wght <= 1.0,
+					 no default)
+-dissim_crit		(int)		Dissimilarity Criterion
+					  1. "1-Norm,"
+					  2. "2-Norm,"
+					  3. "Infinity Norm,"
+					  4. "Spectral Angle Mapper,"
+					  5. "Spectral Information Divergence,"
+					  6. "Square Root of Band Sum Mean
+					     Squared Error,"
+					  7. "Square Root of Band Maximum Mean
+					     Squared Error,"
+					  8. "Normalized Vector Distance,"
+					  9. "Entropy,"
+					 10. "SAR Speckle Noise Criterion,"
+					 (default: 6. "Square Root of Band
+					  Sum Mean Squared Error")
+-log			(string)	Output log file (no default)
+
+
+The following optional parameters specify the scaling of the input image data:
+
+-scale			(double)	Comma delimited list of input data
+					scale factors (specify one value per
+					 band, default = 1.0 for each band)
+-offset			(double)	Comma delimited list of input data
+					offset factors (specify one value per
+					 band, default = 0.0 for each band)
+
+Output Files (with default names - see User's Manual):
+-class_labels_map	(string)	Output class labels map file name
+					(required)
+-boundary_map		(string)	Output hierarchical boundary map file
+					name (optional)
+-region_classes		(string)	Output region classes file name
+					(required)
+-oparam			(string)	Output parameter file name (required,
+					 default =
+					 "'input_image_file_name'.oparam")
+
+Other optional output flags and files (with default names) are:
+-object_conn_type1	(bool)		If 1 (true), create object labels map
+					with "-conn_type" = 1, irrespective of
+					the value of "-conn_type" (below),
+					(default = 0 (false))
+-object_labels_map	(string)	Output object labels map file name
+-region_objects		(string)	Output region objects file name
+NOTE: Both object_labels_map and region_objects must be specified if either is
+specified! These files names are ignored for program mode HSWO with
+"-conn_type" = 1 or for program mode HSWO for any value of "-conn_type"
+when "-object_conn_type1" = false
+
+The following parameters select the optional contents of the required output
+region_classes file and the optional output region_objects file (above):
+
+-region_sum		(bool)		Flag to request the inclusion of the
+					region sum feature values (also sumsq
+					and sumxlogx, if available). 
+					(1 (true) or 1 (false),
+					 default = 1 if nbands < 20,
+					 default = 0 otherwise)
+-region_std_dev		(bool)		Flag to request the inclusion of the
+					region standard deviation feature
+					values. (1 (true) or 0 (false),
+					 default = 0.)
+-region_boundary_npix	(bool)		Flag to request the inclusion of the
+					region boundary number of pixels values
+					(1 (true) or 0 (false),default = 0)
+-region_threshold	(bool)		Flag to request the inclusion of the
+					merge threshold for the most recent
+					merge for each region.
+					(1 (true) or 0 (false), default = 0)
+-region_nb_objects	(bool)		Flag to request the inclusion of the
+					number of region objects contained in
+					each region class. (1 (true) or
+					 0 (false), default = 1 (true)
+					 if spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects"are specified,
+					 and false otherwise.
+					 A true value is allowed only when
+					 spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects" are specified.
+					 User provided value ignored and set to
+					 1 (true) if "-region_objects_list"
+					 (below) is true.)
+-region_objects_list	(bool)		Flag to request the inclusion of the
+					list of region objects contained in
+					each region class. (1 (true) or
+					 0 (false), default = 1 (true) if
+					 spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects" are specified,
+					 and 0 (false) otherwise.
+					 A true value is allowed only when
+					 spclust_wght != 0.0 and both
+					 "-object_labels_map" and
+					 "-region_objects" are specified.)
+
+The following parameters are recommended for variation by all users
+(defaults provided):
+
+-std_dev_wght		(float)		Weight for standard deviation spatial
+					feature (std_dev_wght >= 0.0,
+					 default = 0.0.  Ignored if
+					 -std_dev_image not provided,
+					 and for dissim_crit #5 and #9)
+-edge_threshold		(float)		Threshold for initial neighborhood
+					merges based on edge information.
+					(0.0 <= edge_threshold < 0.5,
+					 default = 0.05 if an edge_image)
+					 provided. If an edge_image is
+					 not provided, the user supplied
+					 value is ignored, and edge_threshold
+					 is set to 0.0)
+-edge_power		(float)		The power to which the edge_value
+					feature is raised after it is scaled
+					to a range of 0 to 1 and before it is
+					used to modified the HSeg region
+					dissimilarity value. (Default = 1.0)
+-edge_wght		(float)		Relative weight for edge information
+					in calculating neighboring region
+					dissimilarity. (0.0 <= edge_wght <
+					 1.0, default = 1.00 if an edge_image
+					 is provided. If an edge_image is
+					 not provided, the user supplied
+					 value is ignored, and edge_wght
+					 is set to 0.0)
+-seam_edge_threshold		(float)		Threshold for across seam merges
+					based on edge information for processing
+					window artifact elimination.
+					(0.0 <= seam_edge_threshold < 0.5,
+					 default = 0.05. Required in RHSEG
+					 mode, but ignored otherwise)
+-conn_type		(int)		Neighbor connectivity type
+					  1-D Case:
+					    1. "Two Nearest Neighbors",
+					    2. "Four Nearest Neighbors",
+					    3. "Six Nearest Neighbors",
+					    4. "Eight Nearest Neighbors",
+					    (default: 1. "Two Nearest
+					     Neighbors")
+					  2-D Case:
+					    1. "Four Nearest Neighbors",
+					    2. "Eight Nearest Neighbors",
+					    3. "Twelve Nearest Neighbors",
+					    4. "Twenty Nearest Neighbors",
+					    5. "Twenty-Four Nearest Neighbors",
+					    (default: 2. "Eight Nearest
+					     Neighbors")
+-chk_nregions  		(unsigned int)	Number of regions at which hierarchical
+					segmentation output is initiated (2 <=
+					 chk_nregions<65535, default calculated
+					 if "hseg_out_nregions" and
+					 "hseg_out_thresholds" not specified)
+-hseg_out_nregions 	(unsigned int)	The set of number of region levels
+					at which hierarchical segmentation
+					outputs are made (a comma delimited
+					 list)
+-hseg_out_thresholds	(float)		The set of merge thresholds at which
+					hierarchical segmentation outputs are
+					made (a comma delimited list)
+NOTE: -chk_nregions, -hseg_out_nregions and -hseg_out_thresholds are mutually
+exclusive. If more than one of these are specified, the last one specified
+controls and the previous specifications are ignored. However,
+-hseg_out_nregions and -hseg_out_thresholds may not be specified for
+-rnb_levels > 1.
+
+-conv_nregions		(unsigned int)	Number of regions for final convergence
+					(0 < conv_nregions < 65535, default=2)
+-gdissim		(bool)		Flag to request output of global
+					dissimilarity values in the log file.
+					(1 (true) or 0 (false), default = 0)
+
+The default values should be used for the following parameters,
+except in special circumstances (defaults provided):
+
+-debug			(int)		Debug option - controls log file
+					outputs, (0 < debug < 255, default = 1)
+-normind		(int)		Image normalization type
+					  1."No Normalization",
+					  2."Normalize Across Bands",
+					  3."Normalize Bands Separately"
+					(default: 2. "Normalize Across Bands")
+-init_threshold		(float)		Threshold for initial fast region
+					merging by a region oriented first
+					merge process (default = 0.0)
+					NOTE: Ignored is edge_threshold > 0.0
+					and edge_image is provided.
+-initial_merge_npix	(unsigned int)	Suppress neighbor merges between regions
+					that are larger than this number of
+					pixels after the initial fast region
+					merging (default: no suppression)
+-random_init_seed	(bool)		Flag to request a "random" seed for the
+					sampling procedure utilized in the
+					initial fast region merging process
+					(1 (true) or 0 (false), default = 0)
+-sort			(bool)		Flag to request that the region classes
+					and region objects be sorted.
+					(1 (true) or 0 (false), default = 1)
+-edge_dissim_option	(int)		Edge dissimilarity option
+					  1."Merge enhancement option",
+					  2."Merge suppression option",
+					(default: 1. "Merge enhancement option"
+					 for HSWO mode, otherwise default is
+					 2. "Merge suppression option"
+					 NOTE: option 2 not allowed in HSWO mode)
+-rnb_levels		(int)		Number of recursive levels
+					(0 < rnb_levels < 255, default
+					 calculated for RHSEG program mode.
+					 Value ignored and parameter set to 1
+					 for HSWO and HSEG program modes.)
+-ionb_levels		(int)		Recursive level at which data I/O is
+					performed (0 < ionb_levels <=
+					 rnb_levels, default calculated)
+-min_nregions		(unsigned int)	Number of regions for convergence at
+					intermediate stages.
+					(0 < min_nregions < 4294967295 default
+					 calculated for RHSEG program mode)
+-spclust_min		(unsigned int)	Minimum number of regions for which
+					spectral clustering is utilized
+					(For splcust_wght = 0.0, default = 0;
+					 otherwise default = 512)
+-spclust_max		(unsigned int)	Maximum number of regions for which
+					spectral clustering is utilized
+					(For splcust_wght = 0.0, default = 0;
+					 otherwise default = 1024)
+-merge_acceleration	(bool)		Flag to request utilization of a merge
+					acceleration factor for small regions.
+					(1 (true) or 0 (false), default = 0)
+
+Copyright © 2006 United States Government as represented by the
+Administrator of the National Aeronautics and Space Administration.
+No copyright is claimed in the United States under Title 17, U.S. Code.
+All Other Rights Reserved.
+

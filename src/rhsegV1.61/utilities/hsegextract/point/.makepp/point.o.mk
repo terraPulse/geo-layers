@@ -1,0 +1,15 @@
+SIG_METHOD_IMPLICIT=1
+IMPLICIT_TARGETS=point.o
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/CommonV1.70 -I/home/pswang/src/rhsegV1.61 -I/usr/include/gdal  -UTHREEDIM -USERIALKEY -UGTKMM -DGDAL -DSHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_EXTRACT /home/pswang/src/CommonV1.70/point/point.cc -o point.o
+SIGNATURE=1588417730,19784
+CWD=.
+SORTED_DEPS=/usr/bin/g++/usr/include/math.h/home/pswang/src/CommonV1.70/point/point.cc/home/pswang/src/CommonV1.70/point/point.h
+INCLUDE_SFXS=
+ARCH=x86_64-linux-gnu-thread-multi
+BUILD_SIGNATURE=1588417730,19784
+DEP_SIGS=1586428689,11582881586892364,464048C3x3P1iAYGNhS4Mb7O5GgC3ImBrbFzFqSuOt8pZ730Q
+IMPLICIT_DEPS=
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/home/pswang/src/rhsegV1.61/usr/include/gdal/usr/includeuserin CPATHin :sys
+SIG_METHOD_NAME=C
+META_DEPS=/home/pswang/src/CommonV1.70/point/point.cc/usr/bin/g++sysiostreamlistmath.hvectoruser/home/pswang/src/CommonV1.70/point/point.h
+END=

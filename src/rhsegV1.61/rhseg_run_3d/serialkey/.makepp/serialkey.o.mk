@@ -1,0 +1,15 @@
+SORTED_DEPS=../../defines.h/usr/bin/g++../../params/params.h../../serialkey/serialkey.cc../../serialkey/serialkey.h
+INCLUDE_SFXS=
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1523291714,772744iDuneRwt2XcpOLXZYEHjZAjqeqfw6gCk/TthqEq+9mPwbNRjCsEoBUaS/9NNn4qwvA
+SIG_METHOD_IMPLICIT=1
+SIGNATURE=1534445011,24744
+SIG_METHOD_NAME=C
+CWD=.
+IMPLICIT_DEPS=
+ARCH=x86_64-linux
+META_DEPS=../../serialkey/serialkey.cc/usr/bin/g++syscctypeclimitscstdiocstdlibcstringctimedefines.hfstreamimage/image.hiomanipiostreammpi.hparams/params.hsstreamstdexceptstringvectoruser../../serialkey/serialkey.h
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/wangp/wk/src/RHSEG/rhsegV1.61/usr/includeuserin CPATHin :sys
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/wangp/wk/src/RHSEG/rhsegV1.61 -DTHREEDIM -DSERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../../serialkey/serialkey.cc -o serialkey.o
+BUILD_SIGNATURE=1534445011,24744
+IMPLICIT_TARGETS=serialkey.o
+END=

@@ -1,0 +1,6 @@
+INCLUDES=initialParams.h paramsGUI.h
+SYSTEM_INCLUDES=iostream params/params.h
+C_MD5_SUM=x2hz/sZJ1TlfGlakYFJQFw
+LIBS=
+SIGNATURE=1416432201,24860
+END=

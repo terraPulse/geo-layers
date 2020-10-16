@@ -1,0 +1,15 @@
+IMPLICIT_TARGETS=shape.o
+SIG_METHOD_IMPLICIT=1
+SIGNATURE=1588417735,59296
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/CommonV1.70 -I/home/pswang/src/rhsegV1.61 -I/usr/include/gdal  -UTHREEDIM -USERIALKEY -UGTKMM -DGDAL -DSHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_EXTRACT /home/pswang/src/CommonV1.70/shape/shape.cc -o shape.o
+CWD=.
+ARCH=x86_64-linux-gnu-thread-multi
+SORTED_DEPS=/usr/bin/g++/home/pswang/src/CommonV1.70/point/point.h/home/pswang/src/CommonV1.70/shape/shape.cc/home/pswang/src/CommonV1.70/shape/shape.h/usr/include/shapefil.h
+INCLUDE_SFXS=
+IMPLICIT_DEPS=
+DEP_SIGS=1586428689,1158288C3ImBrbFzFqSuOt8pZ730QMI+8aOE48lnQe//AcY2BMg/TtsDo9cGFOjahoMprh5zw1584892663,27327
+BUILD_SIGNATURE=1588417735,59296
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/home/pswang/src/rhsegV1.61/usr/include/gdal/usr/includeuserin CPATHin :sys
+SIG_METHOD_NAME=C
+META_DEPS=/home/pswang/src/CommonV1.70/shape/shape.cc/usr/bin/g++syscstdlibcstringfstreamiostreamlistshapefil.hstringvectoruser/home/pswang/src/CommonV1.70/shape/../point/point.hshape.h
+END=

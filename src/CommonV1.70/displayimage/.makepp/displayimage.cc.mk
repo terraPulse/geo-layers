@@ -1,0 +1,6 @@
+INCLUDES=displayimage.h
+SYSTEM_INCLUDES=fstream iostream math.h sstream
+C_MD5_SUM=qw+FypFP1Jy8zNm5FYsoTw
+LIBS=
+SIGNATURE=1397226427,141646
+END=

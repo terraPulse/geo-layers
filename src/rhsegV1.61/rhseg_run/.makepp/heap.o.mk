@@ -1,0 +1,15 @@
+ARCH=x86_64-linux-gnu-thread-multi
+CWD=.
+SIGNATURE=1588417805,22976
+SIG_METHOD_IMPLICIT=1
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/CommonV1.70 -I/home/pswang/src/rhsegV1.61 -I/usr/include/gdal -UTHREEDIM -USERIALKEY -UGTKMM -DGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../rhseg/heap.cc -o heap.o
+BUILD_SIGNATURE=1588417805,22976
+SIG_METHOD_NAME=C
+SORTED_DEPS=../defines.h/usr/bin/g++/usr/include/gdal/gdal_priv.h/usr/include/gdal/gdalwarper.h../rhseg/heap.cc/home/pswang/src/CommonV1.70/image/image.h../params/params.h../parallel/hseg.h../parallel/region_class.h../region/region_class.h../rhseg/hseg.h
+INCLUDE_SFXS=
+META_DEPS=../rhseg/heap.cc/usr/bin/g++sys../defines.h../point/point.h../shape/shape.halgorithmclimitscstdlibdefines.hfloat.hfstreamgdal_priv.hgdalwarper.himage/image.hiostreammapmpi.hparallel/hseg.hparallel/region_class.hparams/params.hregion/region_class.hsetsstreamstdexceptstringvectoruser../rhseg/hseg.h
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1586428689,11582881585509601,723681585509601,24009pyS6WLhq4TiLdIkHj4E/egCm5XOfDRYWcPtlBkU8K9DwiDuneRwt2XcpOLXZYEHjZAgjuOGgPKZisdJk8h4wLvqAQkhYfQY2ZFHF5fjcjUcquQcHtwjdkjFzwbxwGCtTJaBgvm03ZpR0EzimwuTG4WA6Zg
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/home/pswang/src/rhsegV1.61/usr/include/gdal/usr/includeuserin CPATHin :sys
+IMPLICIT_TARGETS=heap.o
+IMPLICIT_DEPS=
+END=

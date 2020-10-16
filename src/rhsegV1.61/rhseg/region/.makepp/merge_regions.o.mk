@@ -1,0 +1,15 @@
+SIG_METHOD_IMPLICIT=1
+IMPLICIT_TARGETS=merge_regions.o
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/CommonV1.70 -I/home/pswang/src/rhsegV1.61 -I/usr/include/gdal -UTHREEDIM -USERIALKEY -UGTKMM -DGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DCONSOLIDATED -DRHSEG_RUN ../../region/merge_regions.cc -o merge_regions.o
+SIGNATURE=1588417705,48712
+CWD=.
+INCLUDE_SFXS=
+SORTED_DEPS=../../defines.h/usr/bin/g++/usr/include/gdal/gdal_priv.h/usr/include/gdal/gdalwarper.h/home/pswang/src/CommonV1.70/image/image.h../../region/merge_regions.cc../../params/params.h../../parallel/region_class.h../../region/region_class.h
+ARCH=x86_64-linux-gnu-thread-multi
+BUILD_SIGNATURE=1588417705,48712
+IMPLICIT_DEPS=
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1586428689,11582881585509601,723681585509601,24009Cm5XOfDRYWcPtlBkU8K9DwEYOYyaAvFhgDoolp1XSX/QiDuneRwt2XcpOLXZYEHjZAQkhYfQY2ZFHF5fjcjUcquQcHtwjdkjFzwbxwGCtTJaBg
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/home/pswang/src/rhsegV1.61/usr/include/gdal/usr/includeuserin CPATHin :sys
+META_DEPS=../../region/merge_regions.cc/usr/bin/g++sys../defines.h../point/point.h../shape/shape.hclimitscstdlibdefines.hfloat.hfstreamgdal_priv.hgdalwarper.himage/image.hiostreammapmpi.hparallel/region_class.hparams/params.hsetsstreamstdexceptstringvectoruser../../region/region_class.h
+SIG_METHOD_NAME=C
+END=

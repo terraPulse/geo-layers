@@ -1,0 +1,15 @@
+ARCH=x86_64-linux-gnu-thread-multi
+CWD=.
+SIGNATURE=1588417793,456448
+SIG_METHOD_IMPLICIT=1
+SIG_METHOD_NAME=C
+BUILD_SIGNATURE=1588417793,456448
+COMMAND=g++ main.o hsegsizeobj.o sizeobj.o find_nghbr.o params/initialParams.o params/params.o image/image.o region/region_class.o region/region_object.o results/results.o -o hsegsizeobj -L/usr/lib -lgdal
+SORTED_DEPS=find_nghbr.o/usr/bin/g++hsegsizeobj.oimage/image.oparams/initialParams.o/usr/lib/libgdal.somain.oparams/params.oregion/region_class.oregion/region_object.oresults/results.osizeobj.o
+INCLUDE_SFXS=lib.la.so.sa.a.sl
+INCLUDE_PATHS=lib/usr/lib/usr/local/lib/usr/libin LIBRARY_PATHsys/usr/includeuserin CPATHin :sys
+DEP_SIGS=1588417780,41361586428689,11582881588417781,26241588417784,2416881588417785,747921585509601,201974881588417786,170561588417788,1823761588417789,997841588417791,890481588417792,275681588417793,12000
+META_DEPS=/usr/bin/g++
+IMPLICIT_TARGETS=hsegsizeobj
+IMPLICIT_DEPS=find_nghbr.ohsegsizeobj.oimage/image.omain.oparams/initialParams.oparams/params.oregion/region_class.oregion/region_object.oresults/results.osizeobj.oliblibgdal
+END=

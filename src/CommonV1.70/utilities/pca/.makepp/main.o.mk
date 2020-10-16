@@ -1,0 +1,15 @@
+IMPLICIT_TARGETS=main.o
+SIGNATURE=1572028532,14536
+IMPLICIT_DEPS=
+INCLUDE_SFXS=
+ARCH=x86_64-linux-thread-multi
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/usr/include/gdal/usr/include/opencv/usr/includeuserin CPATHin :sys
+SORTED_DEPS=/usr/bin/g++/usr/include/gdal/gdal_priv.hmain.ccparams/params.hpca.h
+COMMAND=g++ -c -Wall -O3 -ffloat-store -I/home/pswang/src/CommonV1.70 -Wno-unused-result -I/usr/include/gdal -I/usr/include/opencv -DGDAL -DOPENCV main.cc -o main.o
+SIG_METHOD_IMPLICIT=1
+META_DEPS=/usr/bin/g++main.ccsysclimitscstdlibcstringfstreamgdal_priv.hiostreamsstreamstdexceptstringvectoruser./params/params.hpca.h
+BUILD_SIGNATURE=1572028532,14536
+DEP_SIGS=1566927917,12266081549886253,69753rnuv+qapkrBLkxGHtEinNAIkkBcytublpTEoVAn+zRag3ml8mPlujTdj7vT+bln2kQ
+SIG_METHOD_NAME=C
+CWD=.
+END=

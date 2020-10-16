@@ -1,0 +1,15 @@
+SIGNATURE=1601514701,16448
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/CommonV1.70/usr/include/gdal/usr/includeuserin CPATHin :sys
+ARCH=x86_64-linux-gnu-thread-multi
+META_DEPS=/usr/bin/g++main.ccsys../point/point.h../shape/shape.hclimitscstdlibcstringfstreamgdal_priv.hgdalwarper.himage/image.hiostreamsstreamstdexceptstringvectoruser./params/params.hplurality_vote.h
+DEP_SIGS=1586428689,11582881585509601,723681585509601,24009Cm5XOfDRYWcPtlBkU8K9Dwi5qa4y/TvhbHRl/pt1x9Qw2Zb6HNQ7sC2AMhGlxLSgCQuR0OAVVnxHqUPAsSFWe52w
+COMMAND=g++ -c -Wall -O3 -ffloat-store -I/home/pswang/src/CommonV1.70 -Wno-unused-result -I/usr/include/gdal -DGDAL main.cc -o main.o
+IMPLICIT_DEPS=
+INCLUDE_SFXS=
+SIG_METHOD_NAME=C
+CWD=.
+SORTED_DEPS=/usr/bin/g++/usr/include/gdal/gdal_priv.h/usr/include/gdal/gdalwarper.h/home/pswang/src/CommonV1.70/image/image.hmain.ccparams/params.hplurality_vote.h
+SIG_METHOD_IMPLICIT=1
+BUILD_SIGNATURE=1601514701,16448
+IMPLICIT_TARGETS=main.o
+END=

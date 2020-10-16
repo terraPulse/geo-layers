@@ -1,0 +1,78 @@
+# Top level makefile for the hseglearn program
+NOSKEY := true
+NOGTKMM := false
+NOPTHREADS := true
+NOGDAL := false
+NOSHAPE := true
+NOPARALLEL := true
+RHSEG_DIR_FLAG := true
+COMMON_DIR_FLAG := true
+# A 3D version is permissible - but this is the build for the 2D version
+THREEDIM_FLAG := false
+
+no_implicit_load ../../rhseg
+
+include standard_defs.mk
+
+#ifsys msys
+#  LD += -mwindows
+#endif
+
+global CPP LD CPPFLAGS DEFINES LIBS SKEY_BUILD_FLAG COMMON_DIR RHSEG_DIR
+global GTKMM_BUILD_FLAG GTKMM3_BUILD_FLAG GDAL_BUILD_FLAG SHAPE_BUILD_FLAG PARALLEL_BUILD_FLAG
+#global PTHREADS_BUILD_FLAG
+
+&echo " "
+&echo "For hseglearn build:"
+&echo "CPP = $(CPP)"
+&echo "LD = $(LD)"
+&echo "CPPFLAGS = $(CPPFLAGS)"
+&echo "DEFINES = $(DEFINES)"
+&echo "LIBS = $(LIBS)"
+&echo "SKEY_BUILD_FLAG = $(SKEY_BUILD_FLAG)"
+&echo "GTKMM_BUILD_FLAG = $(GTKMM_BUILD_FLAG)"
+&echo "GTKMM3_BUILD_FLAG = $(GTKMM3_BUILD_FLAG)"
+&echo "GDAL_BUILD_FLAG = $(GDAL_BUILD_FLAG)"
+&echo "SHAPE_BUILD_FLAG = $(SHAPE_BUILD_FLAG)"
+&echo "PARALLEL_BUILD_FLAG = $(PARALLEL_BUILD_FLAG)"
+#&echo "PTHREADS_BUILD_FLAG = $(PTHREADS_BUILD_FLAG)"
+&echo " "
+
+CORE_OBJS := main.o hseglearn.o logwindow.o
+
+PARAMS_OBJS := params/initialParams.o params/params.o params/paramsGUI.o
+
+IMAGE_OBJS := image/image.o
+
+DISPLAY_OBJS := displayimage/displayimage.o
+
+SUBDIR_OBJS := $(PARAMS_OBJS) $(IMAGE_OBJS) $(DISPLAY_OBJS)
+
+REGION_OBJS := region/region_class.o region/region_object.o
+
+RESULTS_OBJS := results/results.o
+
+SUBDIR_OBJS += $(REGION_OBJS) $(RESULTS_OBJS)
+
+GUI_OBJS = gui/fileObject.o gui/numberObject.o
+
+POINT_OBJS = point/point.o
+
+SUBDIR_OBJS += $(GUI_OBJS) $(POINT_OBJS)
+
+ifsys msys
+  EXEC := hseglearn.exe 
+else
+  EXEC := hseglearn
+endif
+
+%.o: %.cc
+    $(CPP) -c $(CPPFLAGS) $(DEFINES) $(input) -o $(output)
+
+$(EXEC): $(CORE_OBJS) $(SUBDIR_OBJS)
+    $(LD) $(inputs) -o $(output) $(LIBS)
+
+install: $(EXEC)
+    mv $(EXEC) $(INSTALL_DIR)
+
+.PHONY: install

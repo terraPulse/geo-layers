@@ -1,0 +1,6 @@
+INCLUDES=
+SYSTEM_INCLUDES=fstream image/image.h sstream stdexcept string
+LIBS=
+C_MD5_SUM=77SSGVzABJn/WKFX71BoAA
+SIGNATURE=1397226440,1967
+END=

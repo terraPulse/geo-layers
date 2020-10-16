@@ -1,0 +1,6 @@
+INCLUDES=initialParams.h
+SYSTEM_INCLUDES=cstdlib iostream params/params.h
+C_MD5_SUM=5FV+dLkiLIwNd9b6G5aaoQ
+LIBS=
+SIGNATURE=1416432204,25457
+END=

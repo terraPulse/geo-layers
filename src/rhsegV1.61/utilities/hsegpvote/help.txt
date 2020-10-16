@@ -1,0 +1,38 @@
+
+The hsegpvote progam is called in the following manner:
+hsegpvote parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter file
+For contents see below.
+
+For this help: hsegpvote -h or hsegpvote -help
+For version information: hsegpvote -v or hsegpvote -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+Each parameter name and its value(s) must be entered on a separate, single line
+
+The following parameters may be specified in the input parameter file:
+
+Input Files:
+-pixel_classification	(string)	Pixel-based classification (required)
+-oparam				(string)	HSeg/RHSeg output parameter file
+						(required)
+-training_labeling	(string)	Training label data (required)
+
+Other input parameters:
+-region_class_flag	(boolean)	If true, use region classes even when
+						region objects are available
+						Can only be true for 4nn connectivity
+						(true (1) or false (0), default = false)
+-color_table		(string)	256 entry RGB Color Table (file) for output
+						classified image (as listed by gdalinfo,
+						optional)
+
+Output Files:
+-opt_classification	(string)	Class optimized classification (required)
+						Will be in same format as input
+						pixel_classification file.
+-log_file		(string)	Log file (required)

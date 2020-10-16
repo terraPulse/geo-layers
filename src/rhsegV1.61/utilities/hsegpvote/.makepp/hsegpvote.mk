@@ -1,0 +1,15 @@
+ARCH=x86_64-linux-gnu-thread-multi
+SIGNATURE=1588417779,490192
+CWD=.
+SORTED_DEPS=connected_component.o/usr/bin/g++hsegpvote.oimage/image.oparams/initialParams.o/usr/lib/libgdal.somain.oparams/params.oregion/region_class.oregion/region_object.oresults/results.o
+INCLUDE_SFXS=lib.la.so.sa.a.sl
+SIG_METHOD_IMPLICIT=1
+SIG_METHOD_NAME=C
+BUILD_SIGNATURE=1588417779,490192
+COMMAND=g++ main.o hsegpvote.o connected_component.o params/initialParams.o params/params.o image/image.o region/region_class.o region/region_object.o results/results.o -o hsegpvote -L/usr/lib -lgdal
+IMPLICIT_DEPS=connected_component.ohsegpvote.oimage/image.omain.oparams/initialParams.oparams/params.oregion/region_class.oregion/region_object.oresults/results.oliblibgdal
+META_DEPS=/usr/bin/g++
+INCLUDE_PATHS=lib/usr/lib/usr/local/lib/usr/libin LIBRARY_PATHsys/usr/includeuserin CPATHin :sys
+DEP_SIGS=1588417766,107041586428689,11582881588417768,491361588417770,2416881588417772,939201585509601,201974881588417773,185121588417775,1823761588417777,997841588417778,880241588417779,27568
+IMPLICIT_TARGETS=hsegpvote
+END=

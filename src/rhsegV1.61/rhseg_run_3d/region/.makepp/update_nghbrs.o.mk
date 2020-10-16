@@ -1,0 +1,15 @@
+SIG_METHOD_IMPLICIT=1
+SIG_METHOD_NAME=C
+SIGNATURE=1574278529,8288
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/rhsegV1.61/usr/includeuserin CPATHin :sys
+IMPLICIT_DEPS=
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1566927917,1226608iDuneRwt2XcpOLXZYEHjZAaDatzsHdIjS1UgMP5TPweggjuOGgPKZisdJk8h4wLvqAQkhYfQY2ZFHF5fjcjUcquQcHtwjdkjFzwbxwGCtTJaBgvm03ZpR0EzimwuTG4WA6Zg
+META_DEPS=../../region/update_nghbrs.cc/usr/bin/g++sys../defines.hclimitscmathcstdlibdefines.hfloat.hfstreamimage/image.hmapmpi.hparallel/hseg.hparallel/region_class.hparams/params.hrhseg/hseg.hsetsstreamstdexceptstringvectoruser../../region/region_class.h
+ARCH=x86_64-linux-thread-multi
+BUILD_SIGNATURE=1574278529,8288
+IMPLICIT_TARGETS=update_nghbrs.o
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/rhsegV1.61 -DTHREEDIM -USERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../../region/update_nghbrs.cc -o update_nghbrs.o
+SORTED_DEPS=../../defines.h/usr/bin/g++../../params/params.h../../region/update_nghbrs.cc../../parallel/hseg.h../../parallel/region_class.h../../region/region_class.h../../rhseg/hseg.h
+INCLUDE_SFXS=
+CWD=.
+END=

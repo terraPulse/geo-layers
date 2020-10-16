@@ -1,0 +1,6 @@
+INCLUDES=spatial.h
+SYSTEM_INCLUDES=ctime index/index.h params/params.h
+C_MD5_SUM=sOjasVvrSiDDX5HlP7Cbvg
+LIBS=
+SIGNATURE=1416432193,39633
+END=

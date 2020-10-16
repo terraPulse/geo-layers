@@ -1,0 +1,28 @@
+
+The compare progam is called in the following manner:
+
+compare parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: compare -h or compare -help
+
+For version information: compare -v or compare -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters may be specified in the input parameter file:
+
+Input Files or parameters:
+-input_image1		(string)	First input image (required)
+One of the following two must be specified:
+-input_image2		(string)	Second input image
+-compare_value		(int)		Value to compare input_image1 to
+(If second input image is specified, then the compare_value will be ignored
+Output File:
+-output_image		(string)	Output image (required)
+
+The compare program compares input_image1 to input_image2 or value producing output_image

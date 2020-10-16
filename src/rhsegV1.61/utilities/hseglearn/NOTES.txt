@@ -1,0 +1,51 @@
+Enable submission of several examples at once.
+
+Add cross at point of selected pixel.
+
+Enable drawing a circle and selecting all region classes within for examples.
+
+
+Cases:  
+
+-> select positive or negative example - and no conflict - just submit without redoing other examples.
+
+-> select negative example with conflict in the positive examples list:
+   must 
+      i. zero out the labeling for this region class label
+      ii. remove the region class label from the positive examples list
+      iii. submit the region class as an ambiguous example.
+
+-> select negative example with conflict in the ambiguous examples list:
+   must 
+      i. zero out the labeling for this region class label
+      ii. remove the region class label from the ambiguous examples list
+      iii. submit the region class as a negative example.
+
+-> select positive example with conflict in the negative examples list:
+   must 
+      i. zero out the labeling for this region class label
+      ii. remove the region class label from the negative examples list
+      iii. submit the region class as an ambiguous example.
+
+-> select positive example with conflict in the ambiguous examples list:
+   must 
+      i. zero out the labeling for this region class label
+      ii. remove the region class label from the ambiguous examples list
+      iii. submit the region class as a positive example.
+
+-> This cannot happen: select positive example with no conflict in examples lists, but with a conflict in display:
+
+-> select negative example with no conflict in examples lists, but with a conflict in display:
+   must 
+      i. determine positive example region class, 
+      ii. save the positive example region class label,
+      iii. zero out the labeling for this region class label
+      iv. submit the negative example.
+      v. resubmit the positive example.
+
+To facilitate this last case (and make the other cases easier), I need to maintain a region class label map.
+For the last case, this will enable a straightforward determination of the positive example region class, and
+the locations in the labeling that need to be zeroed out.
+
+
+

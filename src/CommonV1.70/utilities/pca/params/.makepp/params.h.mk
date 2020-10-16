@@ -1,0 +1,6 @@
+SIGNATURE=1397226438,1689
+SYSTEM_INCLUDES=fstream sstream string vector
+C_MD5_SUM=IkkBcytublpTEoVAn+zRag
+INCLUDES=
+LIBS=
+END=

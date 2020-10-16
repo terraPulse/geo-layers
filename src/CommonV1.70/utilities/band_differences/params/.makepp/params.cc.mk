@@ -1,0 +1,6 @@
+INCLUDES=params.h
+SYSTEM_INCLUDES=cstdlib ctime fstream iostream
+LIBS=
+C_MD5_SUM=9nXARp6J2vNrrZkRQTsKeQ
+SIGNATURE=1397226475,9070
+END=

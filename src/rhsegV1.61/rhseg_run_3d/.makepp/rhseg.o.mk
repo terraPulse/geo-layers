@@ -1,0 +1,15 @@
+SIG_METHOD_NAME=C
+SIG_METHOD_IMPLICIT=1
+IMPLICIT_DEPS=
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1566927917,1226608iDuneRwt2XcpOLXZYEHjZAKq9MzFrEAke4zCVYvobyUguqVJLOXFsS3kiHM31G/1/ggjuOGgPKZisdJk8h4wLvqAH6t/l0ZBFX4I/UBMIG/7CgQkhYfQY2ZFHF5fjcjUcquQp8ynGaUtUItYTP9WYpFtZAcHtwjdkjFzwbxwGCtTJaBgvm03ZpR0EzimwuTG4WA6Zg
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/rhsegV1.61/usr/includeuserin CPATHin :sys
+SIGNATURE=1574278527,1896
+BUILD_SIGNATURE=1574278527,1896
+ARCH=x86_64-linux-thread-multi
+META_DEPS=../rhseg/rhseg.cc/usr/bin/g++sys../defines.hclimitscstdlibcstringdefines.hfloat.hfstreamimage/image.hmapmpi.hparallel/hseg.hparallel/pixel.hparallel/region_class.hparams/params.hpixel/pixel.hregion/region_class.hrhseg/hseg.hsetspatial/spatial.hsstreamstdexceptstringvectoruser../rhseg/hseg.h
+CWD=.
+INCLUDE_SFXS=
+IMPLICIT_TARGETS=rhseg.o
+SORTED_DEPS=../defines.h/usr/bin/g++../params/params.h../rhseg/rhseg.cc../spatial/spatial.h../parallel/hseg.h../parallel/pixel.h../parallel/region_class.h../pixel/pixel.h../region/region_class.h../rhseg/hseg.h
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/rhsegV1.61 -DTHREEDIM -USERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../rhseg/rhseg.cc -o rhseg.o
+END=

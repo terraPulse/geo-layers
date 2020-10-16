@@ -1,0 +1,5 @@
+INCLUDES=utm_convert.h
+SYSTEM_INCLUDES=iostream proj_api.h
+LIBS=
+SIGNATURE=1397226471,1655
+END=

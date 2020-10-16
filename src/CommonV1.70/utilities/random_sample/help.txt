@@ -1,0 +1,31 @@
+
+The random_sample progam is called in the following manner:
+
+random_sample parameter_file_name
+
+where "parameter_file_name" is the name of the input parameter
+file. For contents see below.
+
+For this help: random_sample -h or random_sample -help
+
+For version information: random_sample -v or random_sample -version
+
+The parameter file consists of entries of the form:
+
+-parameter_name parameter_value(s)
+
+The following parameters must be specified in the input parameter file:
+
+Input File:
+-input_image		(string)	Input image (required)
+-rate			(float)		Percentage rate of pixels to be selected
+					from the input image for output to the
+					output image (required)
+-color_table		(string)	256 entry RGB Color Table (file) for output
+					classified image (as listed by gdalinfo,
+				        optional)
+Output File:
+-output_image		(string)	Output image (required)
+
+The random_sample program randomly selects a specified percentage of pixels from the input_image
+for output to the output_image

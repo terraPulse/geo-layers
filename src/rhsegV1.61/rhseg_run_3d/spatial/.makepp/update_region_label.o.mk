@@ -1,0 +1,15 @@
+INCLUDE_SFXS=
+CWD=.
+SORTED_DEPS=../../defines.h/usr/bin/g++../../params/params.h../../spatial/spatial.h../../spatial/update_region_label.cc../../parallel/hseg.h../../parallel/pixel.h../../pixel/pixel.h../../rhseg/hseg.h
+COMMAND=g++ -c -Wall -O3 -ffloat-store -Wno-unused-result -I/home/pswang/src/rhsegV1.61 -DTHREEDIM -USERIALKEY -UGTKMM -UGDAL -USHAPEFILE -UPARALLEL -UWINDOWS -DRHSEG_RUN ../../spatial/update_region_label.cc -o update_region_label.o
+IMPLICIT_TARGETS=update_region_label.o
+BUILD_SIGNATURE=1574278530,2624
+ARCH=x86_64-linux-thread-multi
+META_DEPS=../../spatial/update_region_label.cc/usr/bin/g++sysclimitscstdlibcstringctimedefines.hfstreamimage/image.hmapmpi.hparallel/hseg.hparallel/pixel.hparams/params.hpixel/pixel.hrhseg/hseg.hsetsstreamstdexceptstringvectoruser../../spatial/spatial.h
+DEP_SIGS=z/QeDlmwxoI4L/bLCeMkSQ1566927917,1226608iDuneRwt2XcpOLXZYEHjZAuqVJLOXFsS3kiHM31G/1/gwtu3tLDgyRGoPzPPHgC8fAgjuOGgPKZisdJk8h4wLvqAH6t/l0ZBFX4I/UBMIG/7Cgp8ynGaUtUItYTP9WYpFtZAvm03ZpR0EzimwuTG4WA6Zg
+IMPLICIT_DEPS=
+INCLUDE_PATHS=sysin CPLUS_INCLUDE_PATH/home/pswang/src/rhsegV1.61/usr/includeuserin CPATHin :sys
+SIGNATURE=1574278530,2624
+SIG_METHOD_NAME=C
+SIG_METHOD_IMPLICIT=1
+END=
