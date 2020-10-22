@@ -1,6 +1,6 @@
 # geo-layers
 
-|Layer	|ubuntu	|python	|gdal	|numpy	|boto3	|pandas	|geopandas	|scipy	|sklearn	|rhseg	|custom	|
+|Layer	|ubuntu	|python	|gdal	|numpy	|boto3	|pandas	|geopandas	|scipy	|sklearn	|rhseg	|gutil	|
 |---	|---	|---	|---	|---	|---	|---	|---		|---	|---		|---	|---	|
 |l0		|20.04	|3.8.5	|3.0.4	|1.17.4	|1.9.253|x		|x			|x		|x			|---	|---	|
 |l0.1	|20.04	|3.8.5	|3.0.4	|1.17.4	|1.9.253|x		|x			|x		|x			|1.61	|0.1	|
