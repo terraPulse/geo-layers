@@ -1,10 +1,3 @@
-FROM pswang/geo-layers:l1
-
-WORKDIR /opt
-RUN mkdir /opt/tmp
-
-ADD bin /opt/bin
-ENV PATH=$PATH:/opt/bin
-ENV TMP=/opt/tmp
+FROM 544020760996.dkr.ecr.us-east-1.amazonaws.com/geo-layers:l1
 
 RUN apt-get update -y  && apt-get install --no-install-recommends -y pdal python3-pdal

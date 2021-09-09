@@ -29,8 +29,6 @@ docker build -t 544020760996.dkr.ecr.us-east-1.amazonaws.com/geo-layers:l1.1 ./l
 docker push 544020760996.dkr.ecr.us-east-1.amazonaws.com/geo-layers:l1.1
 
 echo "Building Layer l1.2 ..."
-rm -rf l1.2/bin
-cp -rf bin l1.2/bin
 docker build -t 544020760996.dkr.ecr.us-east-1.amazonaws.com/geo-layers:l1.2 ./l1.2
 docker push 544020760996.dkr.ecr.us-east-1.amazonaws.com/geo-layers:l1.2
 
