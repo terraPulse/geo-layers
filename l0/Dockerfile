@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM public.ecr.aws/ubuntu/ubuntu:focal
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ America/New_York
