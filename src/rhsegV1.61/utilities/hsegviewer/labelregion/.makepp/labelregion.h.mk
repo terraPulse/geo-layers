@@ -1,6 +1,0 @@
-INCLUDES=
-SYSTEM_INCLUDES=defines.h gtkmm.h image/image.h
-C_MD5_SUM=5nFznoqK1BaX6PevbjrHpg
-LIBS=
-SIGNATURE=1416432201,1858
-END=

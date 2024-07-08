@@ -1,6 +1,0 @@
-INCLUDES=spatial.h
-SYSTEM_INCLUDES=ctime params/params.h pixel/pixel.h
-C_MD5_SUM=wtu3tLDgyRGoPzPPHgC8fA
-LIBS=
-SIGNATURE=1416432193,5101
-END=

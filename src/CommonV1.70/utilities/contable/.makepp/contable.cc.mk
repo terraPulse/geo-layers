@@ -1,6 +1,0 @@
-INCLUDES=contable.h params/params.h
-SYSTEM_INCLUDES=iostream
-LIBS=
-C_MD5_SUM=PEEQpfib32O40/Evwe50sw
-SIGNATURE=1397226442,5631
-END=

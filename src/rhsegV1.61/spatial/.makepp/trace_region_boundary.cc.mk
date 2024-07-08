@@ -1,6 +1,0 @@
-INCLUDES=spatial.h
-SYSTEM_INCLUDES=map params/params.h
-C_MD5_SUM=QVRw9ny2Kv2f+q+uQdrgvg
-LIBS=
-SIGNATURE=1416432193,22421
-END=

@@ -1,6 +1,0 @@
-INCLUDES=
-SYSTEM_INCLUDES=fstream image/image.h sstream stdexcept string
-LIBS=
-C_MD5_SUM=XtsOIR6aIVNx28k+hNKUVA
-SIGNATURE=1397226433,2315
-END=

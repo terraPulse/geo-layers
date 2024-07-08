@@ -1,6 +1,0 @@
-SIGNATURE=1397226438,430
-INCLUDES=
-C_MD5_SUM=3ml8mPlujTdj7vT+bln2kQ
-LIBS=
-SYSTEM_INCLUDES=sstream stdexcept string
-END=

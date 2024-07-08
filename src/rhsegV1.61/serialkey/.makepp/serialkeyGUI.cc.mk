@@ -1,6 +1,0 @@
-INCLUDES=serialkeyGUI.h
-SYSTEM_INCLUDES=fstream iostream params/params.h
-C_MD5_SUM=bo+h0LuC6BMpXZeOExWcrg
-LIBS=
-SIGNATURE=1416432192,3832
-END=

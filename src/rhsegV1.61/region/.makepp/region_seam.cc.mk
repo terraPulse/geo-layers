@@ -1,6 +1,0 @@
-INCLUDES=region_seam.h
-SYSTEM_INCLUDES=iostream params/params.h
-C_MD5_SUM=u0yqBUVcpP4gxLiXvP5wCw
-LIBS=
-SIGNATURE=1416432184,1558
-END=
